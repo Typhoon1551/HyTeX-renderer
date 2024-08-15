@@ -1,0 +1,31 @@
+HTX
+
+@config {
+    %stylesheet=./test.htxstyle
+}
+
+@style {
+    %title={
+        font-size=16
+        font=cambria
+        font-color=hex(050505)
+    }
+}
+
+@document {
+    #text(style=title) {
+        Title
+    }
+    #space(value=3) {}
+    #text(style=body) {
+        #column() {
+            lorem ipsum
+        }
+        #column() {
+            lorem ipsum
+        }
+        #float(position=(60,20),width=15,height=15){
+            ${image(url="https://example.com/image")}
+        }
+    }
+}
